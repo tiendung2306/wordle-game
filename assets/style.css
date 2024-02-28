@@ -1,0 +1,28 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#wrapper #title {
+    color: green;
+    font-size: 96px;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 24px;
+}
+
+#words-inputs .word-input {
+    width: 70px;
+    height: 70px;
+    margin-right: 2px;
+    font-size: 64px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 550;
+}
+
+#words-inputs .word-input-container {
+    text-align: center;
+    margin-top: 16px;
+}
