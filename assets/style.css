@@ -26,3 +26,44 @@
     text-align: center;
     margin-top: 16px;
 }
+
+#wrapper #keyboard-container {
+    margin-top: 24px;
+    padding: 16px;
+    background-color: rgb(226, 226, 226);
+    display: block;
+    width: 600px;
+    height: 200px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#wrapper #enter-btn {
+    background-color: rgb(141, 138, 138);
+    color: white;
+    display: inline-block;
+    padding: 14px;
+    text-decoration: none;
+    border-width: 0px;
+}
+
+#wrapper #enter-btn:hover {
+    cursor: pointer;
+    background-color: rgb(173, 172, 172);
+}
+
+.totally-correct-cell {
+    background-color: green;
+    color: white;
+}
+
+.wrong-position-cell {
+    background-color: rgb(172, 172, 0);
+    color: white;
+}
+
+.totally-wrong-cell {
+    background-color: gray;
+    color: white;
+}
