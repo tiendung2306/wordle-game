@@ -14,6 +14,7 @@
             Wordle
         </div>
 
+        
         <div id="words-inputs">
             <div id="input1">
                 <div class="word-input-container">
@@ -95,7 +96,7 @@
                 <button class="keyboard-btn" value="K" onclick="key_clicked(this)"></button>
                 <button class="keyboard-btn" value="L" onclick="key_clicked(this)"></button>
             </span>
-
+            
             <span id="keyboard_row3">
                 <button id="enter-btn" onclick="delete_btn_clicked()">Delete</button>
                 <button class="keyboard-btn" value="Z" onclick="key_clicked(this)"></button>
@@ -108,9 +109,22 @@
                 <button id="enter-btn" onclick="enter_btn_clicked()">Enter</button>
             </span>
         </div>
+        <div id="gameover-panel">
+            <div id="win-panel">
+                <div id="win-text">
+                    YOU WIN!!!
+                </div>
+            </div>
+            <div id="lose-panel">
+                <div id="lose-text">
+                    YOU LOSE!!!
+                    <div id="answer"></div>
+                </div>
+            </div>
+        </div>
 
     </div>
-
+    
     <script src="assets/main.js"></script>
 </body>
 

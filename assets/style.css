@@ -4,12 +4,50 @@
     box-sizing: border-box;
 }
 
+#wrapper {
+    padding-bottom: 48px;
+    position: relative;
+}
+
+.display-block {
+    display: block!important;
+}
+
+#gameover-panel {
+    position: absolute;
+    display: none;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#gameover-panel #win-panel,
+#gameover-panel #lose-panel {
+    position: absolute;
+    display: none;
+    width: 50%;
+    height: 30%;
+    left : 50%;
+    top: 10%;
+    transform: translateX(-50%);
+    background-color: white;
+    font-size: 64px;
+    color: rgb(157, 54, 54);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    
+}
+
 #wrapper #title {
     color: green;
     font-size: 96px;
     text-transform: uppercase;
     text-align: center;
     padding-top: 24px;
+    font-weight: 500;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 #words-inputs .word-input {
@@ -31,12 +69,21 @@
     margin-top: 24px;
     padding: 16px;
     background-color: rgb(226, 226, 226);
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
     width: 610px;
-    height: 200px;
+    /* height: 200px; */
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+}
+
+#keyboard-container #keyboard_row1,
+#keyboard-container #keyboard_row2 {
+    margin-bottom: 4px;
 }
 
 #wrapper #enter-btn {
