@@ -32,7 +32,7 @@
     padding: 16px;
     background-color: rgb(226, 226, 226);
     display: block;
-    width: 600px;
+    width: 610px;
     height: 200px;
     position: relative;
     left: 50%;
@@ -49,6 +49,20 @@
 }
 
 #wrapper #enter-btn:hover {
+    cursor: pointer;
+    background-color: rgb(173, 172, 172);
+}
+
+#wrapper .keyboard-btn {
+    background-color: rgb(141, 138, 138);
+    color: white;
+    display: inline-block;
+    padding: 16px 22px;
+    text-decoration: none;
+    border-width: 0px;
+}
+
+#wrapper .keyboard-btn:hover {
     cursor: pointer;
     background-color: rgb(173, 172, 172);
 }

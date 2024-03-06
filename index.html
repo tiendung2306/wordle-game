@@ -71,9 +71,44 @@
             </div>
         </div>
         <div id="keyboard-container">
-            <button id="enter-btn" onclick="enter_btn_clicked()">Enter</button>
+            <span id="keyboard_row1">
+                <button class="keyboard-btn" value="Q" onclick="key_clicked(this)"></button>
+                <button class="keyboard-btn" value="W" onclick="key_clicked(this)"></button>
+                <button class="keyboard-btn" value="E" onclick="key_clicked(this)"></button>
+                <button class="keyboard-btn" value="R" onclick="key_clicked(this)"></button>
+                <button class="keyboard-btn" value="T" onclick="key_clicked(this)"></button>
+                <button class="keyboard-btn" value="Y" onclick="key_clicked(this)"></button>
+                <button class="keyboard-btn" value="U" onclick="key_clicked(this)"></button>
+                <button class="keyboard-btn" value="I" onclick="key_clicked(this)"></button>
+                <button class="keyboard-btn" value="O" onclick="key_clicked(this)"></button>
+                <button class="keyboard-btn" value="P" onclick="key_clicked(this)"></button>
+            </span>
+
+            <span id="keyboard_row2">
+                <button class="keyboard-btn" value="A" onclick="key_clicked(this)"></button>
+                <button class="keyboard-btn" value="S" onclick="key_clicked(this)"></button>
+                <button class="keyboard-btn" value="D" onclick="key_clicked(this)"></button>
+                <button class="keyboard-btn" value="F" onclick="key_clicked(this)"></button>
+                <button class="keyboard-btn" value="G" onclick="key_clicked(this)"></button>
+                <button class="keyboard-btn" value="H" onclick="key_clicked(this)"></button>
+                <button class="keyboard-btn" value="J" onclick="key_clicked(this)"></button>
+                <button class="keyboard-btn" value="K" onclick="key_clicked(this)"></button>
+                <button class="keyboard-btn" value="L" onclick="key_clicked(this)"></button>
+            </span>
+
+            <span id="keyboard_row3">
+                <button id="enter-btn" onclick="delete_btn_clicked()">Delete</button>
+                <button class="keyboard-btn" value="Z" onclick="key_clicked(this)"></button>
+                <button class="keyboard-btn" value="X" onclick="key_clicked(this)"></button>
+                <button class="keyboard-btn" value="C" onclick="key_clicked(this)"></button>
+                <button class="keyboard-btn" value="V" onclick="key_clicked(this)"></button>
+                <button class="keyboard-btn" value="B" onclick="key_clicked(this)"></button>
+                <button class="keyboard-btn" value="N" onclick="key_clicked(this)"></button>
+                <button class="keyboard-btn" value="M" onclick="key_clicked(this)"></button>
+                <button id="enter-btn" onclick="enter_btn_clicked()">Enter</button>
+            </span>
         </div>
-        
+
     </div>
 
     <script src="assets/main.js"></script>
