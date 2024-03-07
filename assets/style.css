@@ -68,7 +68,7 @@
 #wrapper #keyboard-container {
     margin-top: 24px;
     padding: 16px;
-    background-color: rgb(226, 226, 226);
+    /* background-color: rgb(241, 240, 240); */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -87,7 +87,7 @@
 }
 
 #wrapper #enter-btn {
-    background-color: rgb(141, 138, 138);
+    background-color: rgb(175, 175, 175);
     color: white;
     display: inline-block;
     padding: 14px;
@@ -97,11 +97,11 @@
 
 #wrapper #enter-btn:hover {
     cursor: pointer;
-    background-color: rgb(173, 172, 172);
+    background-color: rgb(206, 206, 206);
 }
 
 #wrapper .keyboard-btn {
-    background-color: rgb(141, 138, 138);
+    background-color: rgb(175, 175, 175);
     color: white;
     display: inline-block;
     padding: 16px 22px;
@@ -111,20 +111,20 @@
 
 #wrapper .keyboard-btn:hover {
     cursor: pointer;
-    background-color: rgb(173, 172, 172);
+    background-color: rgb(206, 206, 206);
 }
 
 .totally-correct-cell {
-    background-color: green;
-    color: white;
+    background-color: green!important;
+    color: white!important;
 }
 
 .wrong-position-cell {
-    background-color: rgb(172, 172, 0);
-    color: white;
+    background-color: rgb(172, 172, 0)!important;
+    color: white!important;
 }
 
 .totally-wrong-cell {
-    background-color: gray;
-    color: white;
+    background-color: rgb(82, 82, 82)!important;
+    color: white!important;
 }
