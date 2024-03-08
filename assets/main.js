@@ -19,6 +19,7 @@ let all_keyboard_btn = document.querySelectorAll(".keyboard-btn");
 let gameover_panel = document.querySelector("#gameover-panel");
 let gameover_win_panel = document.querySelector("#gameover-panel #win-panel");
 let gameover_lose_panel = document.querySelector("#gameover-panel #lose-panel");
+let not_valid_panel = document.querySelector("#wrapper #not-valid-panel");
 
 function toLowerCase(chr) {
     if (chr >= 'a' && chr <= 'z') return chr;
@@ -35,8 +36,10 @@ function word_input_cell_check(self, idx) {
     if (toLowerCase(self.value[0]) < 'a'.charCodeAt() || toLowerCase(self.value[0]) > 'z'.charCodeAt())
         self.value = "";
 
-    if (idx % 5 != 4 && self.value.length == 1)
+    if (idx % 5 != 4 && self.value.length == 1) {
         word_input_cells[idx + 1].focus();
+        curr_cell++;
+    }
 }
 
 for (let i = 0; i < word_input_cells.length; i++) {
@@ -78,7 +81,7 @@ function check_cell_correct_letter(thisCell, thisCellIndex) {
     thisCellLetter = thisCell.value;
     if (thisCellLetter >= 'A' && thisCellLetter <= 'Z')
         thisCellLetter = thisCellLetter.toLowerCase();
-    console.log(thisCellLetter);
+    // console.log(thisCellLetter);
     if (thisCellLetter == solution_word[thisCellIndex % 5]) return 2; // 2 neu chu nay o dung vi tri
     for (let i = 0; i < solution_word.length; i++) {
         if (thisCellLetter == solution_word[i]) return 1; // 1 neu chu nay co trong tu dap an nhung o sai vi tri
@@ -95,17 +98,28 @@ function close_all_cell_input() {
 function delete_btn_clicked() {
     if (word_input_cells[curr_guess_num * 5 + 4].value != "") {
         word_input_cells[curr_guess_num * 5 + curr_cell].value = "";
-        curr_cell++;
+        // curr_cell--;
     }
-    else word_input_cells[curr_guess_num * 5 + curr_cell - 1].value = "";
-    if (curr_cell > 0) curr_cell--;
+    else {
+        if (curr_cell > 0) {
+            word_input_cells[curr_guess_num * 5 + curr_cell - 1].value = "";
+            curr_cell--;
+        }
+        else {
+            word_input_cells[curr_guess_num * 5 + curr_cell].value = "";
+        }
+    }
 }
 
 function enter_btn_clicked() {
-    console.log("CLICKED!!!")
+    // console.log("CLICKED!!!")
     if (isGameEnd) return;
     if (!check_valid_word(curr_guess_num)) {
-        console.log("Từ của bạn nhập vào không hợp lệ");
+        // console.log("Từ của bạn nhập vào không hợp lệ");
+        not_valid_panel.setAttribute("style", "display: inline-block");
+        setTimeout(function () {
+            not_valid_panel.removeAttribute("style");
+        }, 1500)
         return;
     }
 
@@ -185,9 +199,14 @@ function keyboard_container_process() {
 }
 
 function key_clicked(self) {
-    console.log(self.value);
+    // console.log(self.value);
     word_input_cells[curr_guess_num * 5 + curr_cell].value = self.value;
     if (curr_cell < 4) curr_cell++;
+}
+
+function change_difficulty() {
+    isEasyMode = !isEasyMode;
+    console.log(isEasyMode);
 }
 
 function main() {

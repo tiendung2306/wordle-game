@@ -14,7 +14,18 @@
             Wordle
         </div>
 
-        
+        <div id="not-valid-panel">
+            Không hợp lệ
+        </div>
+
+        <label class="switch">
+            <div id="switch-text">
+                Hard Mode: 
+            </div>
+            <input type="checkbox" onclick="change_difficulty()">
+            <span class="slider round"></span>
+        </label>
+
         <div id="words-inputs">
             <div id="input1">
                 <div class="word-input-container">
@@ -96,7 +107,7 @@
                 <button class="keyboard-btn" value="K" onclick="key_clicked(this)"></button>
                 <button class="keyboard-btn" value="L" onclick="key_clicked(this)"></button>
             </span>
-            
+
             <span id="keyboard_row3">
                 <button id="enter-btn" onclick="delete_btn_clicked()">Delete</button>
                 <button class="keyboard-btn" value="Z" onclick="key_clicked(this)"></button>
@@ -124,7 +135,7 @@
         </div>
 
     </div>
-    
+
     <script src="assets/main.js"></script>
 </body>
 
